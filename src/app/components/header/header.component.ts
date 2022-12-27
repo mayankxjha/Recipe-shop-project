@@ -6,15 +6,13 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
-  collapsed = true;
+  collapsed : boolean;
   @Output() navBarSemaphore = new EventEmitter<{ SemaBool: boolean }>();
 
   loadRecipes(){
       this.navBarSemaphore.emit({SemaBool: true});
-      console.log(this.navBarSemaphore);
     }
     loadShoppingList(){
       this.navBarSemaphore.emit({SemaBool: false});
-      console.log(this.navBarSemaphore);
   }
 }

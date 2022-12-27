@@ -1,8 +1,10 @@
-<app-header (navBarSemaphore) = "conversion($event)"></app-header>
+<app-header (navBarSemaphore)="conversion($event)"></app-header>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <app-recipe *ngIf="navBarSema; else shoppingList"></app-recipe>
+      <app-recipe
+        *ngIf="navBarSema; else shoppingList"
+      ></app-recipe>
       <ng-template #shoppingList>
         <app-shopping-list></app-shopping-list>
       </ng-template>

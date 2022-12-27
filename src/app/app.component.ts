@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Recipe } from './components/recipe/recipe.model';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,7 @@ export class AppComponent {
   title = 'shop-project';
   navBarSema: boolean = true;
   conversion(eventData: { SemaBool: boolean }) {
+    console.log('Data recieved ' + eventData.SemaBool);
     this.navBarSema = eventData.SemaBool;
-    console.log('Data recieved' + eventData.SemaBool);
   }
 }
